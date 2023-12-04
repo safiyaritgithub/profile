@@ -28,22 +28,22 @@ import axios from 'axios';
       <div className='flex justify-center items-center h-screen  '>  
          <div className=" border-4 border-black rounded-lg overflow-hidden">
         <img
-          className="w-[200px] h-[200px]"
+          className="w-[150px] h-[100px] sm:w-[200px] sm:h-[200px]"
           src={user.picture.large}
           alt={`${user.name.first} ${user.name.last}`}
         />
         </div>
-        <div className="p-4 relative bottom-12 leading-9">        
-          <div className='flex gap-3 text-blue-500 '>
+        <div className="p-4 sm:relative sm:bottom-12 sm:leading-9">        
+          <div className='sm:flex gap-3 text-blue-500 '>
           <p >
-          <span className='text-black text-lg font-medium'> FirstName:</span> {user.name.first} 
+          <span className='text-black text-md sm:text-lg font-normal sm:font-medium'> FirstName:</span> <span className='text-sm sm:text-[15px]'>{user.name.first} </span>
           </p>
           <p>
-          <span className='text-black text-lg font-medium'>LastName:</span>  {user.name.last}
+          <span className='text-black text-md sm:text-lg font-normal sm:font-medium'>LastName:</span> <span className='text-sm sm:text-[15px]'>{user.name.last} </span>
              </p>
           </div>
-          <p className="text-blue-500"><span className='text-black text-lg font-medium'>Gender:</span>{user.gender}</p>
-           <p className="text-blue-500"><span className='text-black text-lg font-medium'>PhoneNumber:</span>{user.phone}</p>
+          <p className="text-blue-500"><span className='text-black text-md sm:text-lg font-normal sm:font-medium'>Gender:</span><span className='text-sm sm:text-[15px] pl-1'>{user.gender}</span></p>
+           <p className="text-blue-500"><span className='text-black text-md sm:text-lg font-normal sm:font-medium'>Phone:</span><span className='text-xs sm:text-[15px] pl-1'>{user.phone}</span></p>
         </div>
         </div>
         </div>
